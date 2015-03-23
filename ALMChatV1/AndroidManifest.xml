@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.easemob.chatuidemo"
+    android:versionCode="12"
+    android:versionName="2.1.5" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+ 	 <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+	 <uses-permission android:name="android.permission.GET_ACCOUNTS" />  
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />  
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />  
+	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />  
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />  
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />  
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />  
+  
+    <application
+        android:name="ALMApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_uidemo"
+        android:label="@string/appname" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <!-- 开屏页 -->
+           <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 登陆 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 聊天页面 -->
+        <activity
+            android:name=".activity.ChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <!-- 添加好友 -->
+        <activity
+            android:name=".activity.AddContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组详情 -->
+        <activity
+            android:name=".activity.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组列表 -->
+        <activity
+            android:name=".activity.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 新建群组 -->
+        <activity
+            android:name=".activity.NewGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name=".activity.ExitGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" >
+        </activity>
+        <!-- 群组选人 -->
+        <activity
+            android:name=".activity.GroupPickContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 地图 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.BaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name=".activity.NewFriendsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name=".activity.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name=".activity.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 自定义的alertdialog -->
+        <activity
+            android:name=".activity.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name=".activity.ShowBigImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 下载文件 -->
+        <activity
+            android:name=".activity.ShowNormalFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 黑名单 -->
+        <activity
+            android:name=".activity.BlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name=".activity.PublicGroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 语音通话 -->
+        <activity
+            android:name=".activity.VoiceCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style" >
+        </activity>
+        <!-- 视频通话 -->
+        <activity
+            android:name=".activity.VideoCallActivity"
+            android:theme="@style/horizontal_slide" 
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            >
+        </activity>
+        <!-- 群聊简单信息 -->
+        <activity
+            android:name=".activity.GroupSimpleDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组黑名单用户列表 -->
+        <activity
+            android:name=".activity.GroupBlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name=".activity.EditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name=".activity.ShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- choose video -->
+        <activity
+            android:name=".activity.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- upload error log -->
+        <activity
+            android:name=".activity.DiagnoseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        
+            <activity android:name="com.xgr.wonderful.ui.MainActivity"
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.RegisterAndLoginActivity"
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.EditActivity"
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"
+            	  android:windowSoftInputMode="adjustPan"
+            	  ></activity>
+         <activity android:name="com.xgr.wonderful.ui.EditSignActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.CommentActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.FavActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.PersonalActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.PersonalEditActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.SettingsActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+         <activity android:name="com.xgr.wonderful.ui.AboutActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+         
+    	 <!-- umeng feedback -->
+         <activity android:name="com.umeng.fb.ConversationActivity"
+         		  android:theme="@android:style/Theme.NoTitleBar"/>
+         <activity android:name="com.umeng.fb.ContactActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"/>
+         <meta-data android:value="5306c26856240b946c0b82d7" android:name="UMENG_APPKEY"></meta-data>
+         <meta-data android:value="QD_umeng" android:name="UMENG_CHANNEL"/>
+         <meta-data android:name="UMENG_MESSAGE_SECRET" android:value="aa303ab2933220ee2d82cc7ac3575768"/>
+    	 <!-- umeng update -->
+    	 <service
+			       android:name="com.umeng.update.net.DownloadingService"
+			       android:process=":DownloadingService" >
+		 </service>
+		 <activity 
+		    	   android:name="com.umeng.update.UpdateDialogActivity"
+		           android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		 </activity>
+		 <!-- umeng push -->
+		 <receiver
+			    android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+			    android:exported="false" >
+			</receiver>
+			<receiver android:name="com.umeng.message.RegistrationReceiver" >
+			    <intent-filter>
+			        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="android.intent.action.PACKAGE_REMOVED" />
+			
+			        <data android:scheme="package" />
+			    </intent-filter>
+			</receiver>
+			<receiver android:name="com.umeng.message.UmengBroadcastReceiver" >
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.RECEIVE" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="com.xgr.qingqiang.intent.action.COMMAND" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.RE_ELECTION_V2" />
+			    </intent-filter>
+			</receiver>
+			<service
+			    android:name="com.umeng.message.UmengService"
+			    android:exported="true"
+			    android:process=":umengService_v1" >
+			    <intent-filter>
+			        <action android:name="com.xgr.qingqiang.intent.action.START" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="com.xgr.qingqiang.intent.action.COCKROACH" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.PING" />
+			    </intent-filter>
+			</service>
+			<service
+			    android:name="org.android.agoo.service.ElectionService"
+			    android:exported="true"
+			    android:process=":umengService_v1" >
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.ELECTION_V2" />
+			    </intent-filter>
+			</service>
+			<service android:name="com.umeng.message.UmengIntentService" />
+		 
+		   <!-- youmi -->
+		   <activity
+			    android:name="net.youmi.android.AdBrowser"
+			    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+			    android:theme="@android:style/Theme.Light.NoTitleBar" >
+			</activity>
+			<service
+			    android:name="net.youmi.android.AdService"
+			    android:exported="false" >
+			</service>
+			<service
+			    android:name="net.youmi.android.ExpService"
+			    android:exported="false" >
+			</service>
+			<receiver
+			    android:name="net.youmi.android.AdReceiver" >
+			    <intent-filter>
+			        <action android:name="android.intent.action.PACKAGE_ADDED" />
+			        <data android:scheme="package" />
+			    </intent-filter>
+			</receiver>
+			<receiver
+			    android:name="net.youmi.android.offers.OffersReceiver"
+			    android:exported="false" >
+			</receiver>
+			<meta-data android:name="YOUMI_CHANNEL"
+    				   android:value="10190" >
+			</meta-data>
+			
+			        <!-- openqq -->
+         <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100548485" />
+ 				<!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="ztghost#alm" />
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.easemob.chat.EMChatService" />
+        
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"
+             />
+        <!-- umeng appkey，可忽略 -->
+         <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="53912a3156240b01a7075ed1" >
+        </meta-data>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+        
+    </application>
+
+</manifest>
